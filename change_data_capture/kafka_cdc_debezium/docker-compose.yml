@@ -74,8 +74,9 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-    postgres:
-    image: postgres:latest
+      
+  postgres:
+    image: postgres:15.4-alpine
     container_name: postgres
     hostname: postgres
     ports:
@@ -83,7 +84,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: financial_db
+      POSTGRES_DB: test_db
     command: [ 'postgres', '-c', 'wal_level=logical' ]
     healthcheck:
       test: [ 'CMD', 'psql', '-U', 'postgres', '-c', 'SELECT 1' ]

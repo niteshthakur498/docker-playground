@@ -1,0 +1,9 @@
+{
+  "name": "file-sink-connector",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.file.FileStreamSinkConnector",
+    "tasks.max": "1",
+    "file": "/tmp/test_sink.txt",  
+    "topics": "postgres_test_db.public.test_table" 
+  }
+}

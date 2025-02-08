@@ -1,20 +1,25 @@
-curl -X GET http://localhost:8083/
+curl -X GET http://localhost:8093/
 
-curl -X GET http://localhost:8083/connectors
-
-
-
-curl -X POST http://localhost:8083/connectors/inventory-connector/restart
+curl -X GET http://localhost:8093/connectors
 
 
 
-curl -X DELETE http://localhost:8083/connectors/inventory-connector
+curl -X POST http://localhost:8093/connectors/inventory-connector/restart
+
+
+
+curl -X DELETE http://localhost:8093/connectors/postgres-connector
 
 
 
 #Source
 
-curl -X POST http://localhost:8083/connectors \
+curl -X POST http://localhost:8093/connectors \
      -H "Content-Type: application/json" \
      -d @source-config.json
+
+
+curl -X POST http://localhost:8093/connectors \
+     -H "Content-Type: application/json" \
+     -d @sink-config.json
 

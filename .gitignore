@@ -38,3 +38,46 @@ secrets.tar
 .ccloud
 .connector_config
 *.lck
+
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.env
+
+# Bash scripts
+**/*.sh~
+**/*.log
+**/*.bak
+
+# General OS files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+.vscode/
+**/*.swp
+**/*.swo
+
+# Build and Dependency Files
+dist/
+build/
+coverage/
+**/dist/
+**/build/
+**/coverage/
+
+# System-specific files
+**/*.exe
+**/*.dll
+**/*.so
+
+# Temporary files
+**/*.tmp
+**/*.temp
+**/~lock.*
+
+# Git-related files
+.gitignore~
